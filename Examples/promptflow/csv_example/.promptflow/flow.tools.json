@@ -1,0 +1,97 @@
+{
+  "package": {},
+  "code": {
+    "chat.jinja2": {
+      "type": "llm",
+      "inputs": {
+        "df_columns": {
+          "type": [
+            "string"
+          ]
+        },
+        "question": {
+          "type": [
+            "string"
+          ]
+        }
+      },
+      "source": "chat.jinja2"
+    },
+    "analyze_df.py": {
+      "type": "python",
+      "inputs": {
+        "csvfile": {
+          "type": [
+            "string"
+          ]
+        },
+        "input_program": {
+          "type": [
+            "string"
+          ]
+        }
+      },
+      "source": "analyze_df.py",
+      "function": "my_python_tool"
+    },
+    "concat_result.jinja2": {
+      "type": "prompt",
+      "inputs": {
+        "gen_program": {
+          "type": [
+            "string"
+          ]
+        },
+        "format_out": {
+          "type": [
+            "string"
+          ]
+        },
+        "insights_out": {
+          "type": [
+            "string"
+          ]
+        }
+      },
+      "source": "concat_result.jinja2"
+    },
+    "output_format.jinja2": {
+      "type": "llm",
+      "inputs": {
+        "exec_output": {
+          "type": [
+            "string"
+          ]
+        }
+      },
+      "source": "output_format.jinja2"
+    },
+    "output_result.jinja2": {
+      "type": "prompt",
+      "inputs": {
+        "format_out": {
+          "type": [
+            "string"
+          ]
+        },
+        "insights": {
+          "type": [
+            "string"
+          ]
+        }
+      },
+      "source": "output_result.jinja2"
+    },
+    "generate_insights.jinja2": {
+      "type": "llm",
+      "inputs": {
+        "question": {
+          "type": [
+            "string"
+          ]
+        }
+      },
+      "source": "generate_insights.jinja2"
+    }
+  }
+}
